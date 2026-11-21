@@ -12,6 +12,14 @@ This template ships with only the branch `main`.
 
 Leave `main` untouched. Play only on the `match` branch, so the empty board stays available as the reference.
 
+## Board and move rules
+
+A valid board has exactly three rows and three columns. Write only `X`, `O`, and `.` cells, with exactly one space between cells and no extra spaces or characters. Each row is on its own line.
+
+X goes first. A board is valid only when the number of Xs equals the number of Os, or when there is exactly one more X than O. The first case means it is X's turn; the second means it is O's turn. A board where either player has already made three in a row is finished and is not a valid in-progress board.
+
+When choosing a move, block the opponent's immediate winning move whenever one exists. This defensive move takes priority even if you could win immediately instead.
+
 ## Start the shared game
 
 1. At the session, choose one person's public repository created from this template.
